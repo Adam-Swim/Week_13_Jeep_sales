@@ -19,6 +19,7 @@ import org.springframework.test.context.jdbc.SqlConfig;
 
 import com.promineotech.jeep.entity.Jeep;
 import com.promineotech.jeep.entity.JeepModel;
+import lombok.Getter;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 
 
@@ -41,6 +42,7 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 class FetchJeepTest {
   
  @Autowired
+ @Getter
   private TestRestTemplate restTemplate;
   
   @LocalServerPort
