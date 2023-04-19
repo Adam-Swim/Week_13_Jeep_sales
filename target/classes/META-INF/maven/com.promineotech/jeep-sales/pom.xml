@@ -38,16 +38,14 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.24</version>
-        <scope>provided</scope>
+      <scope>provided</scope>
     </dependency>
     
     <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
     <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
-        <version>1.7.36</version>
-    </dependency>
+        </dependency>
     
     <!-- Bean Validation ============================================ -->
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation -->
@@ -90,6 +88,11 @@
     </dependency>
 
     
+     <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency> 
     
     <dependency>
       <groupId>org.springframework.boot</groupId>

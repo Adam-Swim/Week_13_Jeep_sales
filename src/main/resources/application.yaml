@@ -1,10 +1,7 @@
-logging:
-  level:
-   root: warn
-   '[com.promineotech]': debug 
+
 spring:
   datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/jeep
     username: jeep
     password: jeep
+    url: jdbc:mysql://localhost:3306/jeep
+   
