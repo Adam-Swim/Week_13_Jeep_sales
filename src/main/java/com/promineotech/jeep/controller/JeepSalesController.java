@@ -24,8 +24,9 @@ import io.swagger.v3.oas.annotations.servers.Server;
 @RequestMapping("/jeeps")
 @OpenAPIDefinition(info = @Info(title = "Jeep Sales Service"), servers = {
     @Server(url = "http://localhost:8080", description = "Local server." )})
+
 public interface JeepSalesController {
-  public static final int TRIM_MAX_LENGTH = 30;
+  //public static final int TRIM_MAX_LENGTH = 30;
 
   // @formatter:off
   @Operation(
@@ -73,8 +74,8 @@ public interface JeepSalesController {
       
       @RequestParam(required = false)
           JeepModel model,
-      @Length(max = TRIM_MAX_LENGTH)
-      @Pattern(regexp = "[\\w\\s]*")
+//      @Length(max = TRIM_MAX_LENGTH)
+//      @Pattern(regexp = "[\\w\\s]*")
       @RequestParam(required = false) 
           String trim);
 //@formatter:on

@@ -5,16 +5,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
+import java.util.HashMap;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import com.promineotech.jeep.entity.Jeep;
 import com.promineotech.jeep.entity.JeepModel;
-import lombok.extern.slf4j.Slf4j;
-import java.util.HashMap;
 
-@Component
+import lombok.extern.slf4j.Slf4j;
+
+
+@Service
 @Slf4j
 public class DefaultJeepSalesDao implements JeepSalesDao {
   
@@ -24,6 +28,7 @@ public class DefaultJeepSalesDao implements JeepSalesDao {
   @Override
   public List<Jeep> fetchJeeps(JeepModel model, String trim) {
     log.debug("DAO: model={}, trim={}", model, trim);
+    
     // @Formatter:off
     String sql = ""
         + "SELECT * "

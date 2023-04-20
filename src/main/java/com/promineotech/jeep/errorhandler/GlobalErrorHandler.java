@@ -103,10 +103,10 @@ public class GlobalErrorHandler {
     error.put("reason", status.getReasonPhrase());
     
     if(logStatus == LogStatus.MESSAGE_ONLY) {
-      log.error("Exception: {}", e.toString());
+      log.error("Exception:", e.toString());
     }
     else {
-      log.error("Exception: {}", e);
+      log.error("Exception:", e);
     }
     
     return error;
