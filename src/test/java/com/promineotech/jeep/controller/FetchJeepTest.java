@@ -53,20 +53,20 @@ import lombok.Getter;
 
 class FetchJeepTest {
   
-  @Nested
-  @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-
-  @ActiveProfiles("test")
-
-  @Sql(
-      scripts = {
-      "classpath:flyway/migrations/V1.0__Jeep_Schema.sql",
-       "classpath:flyway/migrations/V1.1__Jeep_Data.sql"},
-        config = @SqlConfig(encoding = "utf-8"))
-
-  class TestsThatDoNotPolluteApplicationContext {
-    
-  }
+//  @Nested
+//  @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+//
+//  @ActiveProfiles("test")
+//
+//  @Sql(
+//      scripts = {
+//      "classpath:flyway/migrations/V1.0__Jeep_Schema.sql",
+//       "classpath:flyway/migrations/V1.1__Jeep_Data.sql"},
+//        config = @SqlConfig(encoding = "utf-8"))
+//
+//  class TestsThatDoNotPolluteApplicationContext {
+//    
+//  }
 //  @Nested
 //  @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 //
@@ -149,11 +149,11 @@ class FetchJeepTest {
     assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
     
     //And: the actual list returned is the same as the expected list
-    //List<Jeep> actual = response.getBody();
+    List<Jeep> actual = response.getBody();
     List<Jeep> expected = buildExpected();
     
     
-    //actual.forEach(jeep -> jeep.setModelPK(null));
+    actual.forEach(jeep -> jeep.setModelPK(null));
     
     assertThat(response.getBody()).isEqualTo(expected);
     
