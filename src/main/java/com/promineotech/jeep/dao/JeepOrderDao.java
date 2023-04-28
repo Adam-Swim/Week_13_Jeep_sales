@@ -16,7 +16,7 @@ public interface JeepOrderDao {
 
     List<Option> fetchOptions(List<String> optionIds);
 
-    // Uses Optional to prevent NullPointerException errors.
+    
     Optional<Customer> fetchCustomer(String customerId);
 
     Optional<Jeep> fetchModel(JeepModel model, String trim, int doors);

@@ -1,7 +1,6 @@
 package com.promineotech.jeep.entity;
 
 import java.math.BigDecimal;
-import java.util.Comparator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

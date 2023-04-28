@@ -82,11 +82,11 @@ class CreateOrderTest {
         + "  \"tire\":\"35_TOYO\",\n"
         + "  \"options\":[\n"
         + "    \"DOOR_QUAD_4\", \n"
-        + "    \"EXT_AEV_LIFT\":,\n"
+        + "    \"EXT_AEV_LIFT\",\n"
         + "    \"EXT_WARN_WINCH\",\n"
         + "    \"EXT_WARN_BUMPER_FRONT\",\n"
         + "    \"EXT_WARN_BUMPER_REAR\",\n"
-        + "    \"EXT_ARB_COMPRESSOR\",\n"
+        + "    \"EXT_ARB_COMPRESSOR\"\n"
         + "  ]\n"
         + "}";
    // @formatter:on
