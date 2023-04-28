@@ -1,11 +1,8 @@
 package com.promineotech.jeep.service;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.NoSuchElementException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import com.promineotech.jeep.dao.JeepSalesDao;
 import com.promineotech.jeep.entity.Jeep;
 import com.promineotech.jeep.entity.JeepModel;
